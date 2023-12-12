@@ -1,0 +1,120 @@
+/* Custom styles */
+
+/* Common Styles for All Pages */
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Wrapper for content */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+}
+
+.navbar-brand,
+.navbar-nav a {
+    color: #fff !important;
+}
+
+/* Content Section */
+.container {
+    margin-top: 20px;
+}
+
+/* Home Page */
+#home h1 {
+    font-size: 36px;
+}
+
+.img-fluid {
+    max-width: 80%;
+    height: auto;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Workout and Meal Plan Pages */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Add this to your existing CSS file */
+
+.food-image {
+    max-width: 100%; /* Ensures images don't exceed their original size */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Fixes extra space below inline images */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.workout-image {
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensures images maintain aspect ratio while filling the box */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+/* Contact Page */
+#contact {
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+
+

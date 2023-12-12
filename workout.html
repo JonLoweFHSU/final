@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="workout.js"></script>
+    <title>Your Fitness Hub - Workout Plan</title>
+
+    <!--Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar (Same as final.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Your Fitness Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="final.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="workout.html">Workout Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meals.html">Meal Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="wrapper mt-5">
+        <!-- Workout Page -->
+        <section id="workout">
+            <div class="container">
+                <div class="row">
+                    <!-- Large Image on the Left -->
+                    <div class="col-md-8">
+                        <img src="gym3.jpg" alt="Large Workout Image" class="img-fluid">
+                    </div>
+                    <!-- Form on the Right -->
+                    <div class="col-md-4">
+                        <h2 class="text-center mb-4">Create Your Workout Plan</h2>
+                        <form id="workoutForm">
+                            <!-- Form fields for user input (goals, workout type, training days, time for workout, experience level) -->
+                            <div class="mb-3">
+                                <label for="goals" class="form-label">Goals:</label>
+                                <select class="form-select" id="goals" name="goals" required>
+                                    <option value="" disabled selected>Select your goal</option>
+                                    <option value="gain-strength">Gain Strength</option>
+                                    <option value="tone">Tone</option>
+                                    <option value="lose-weight">Weight Loss</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="workout-type" class="form-label">Workout Type:</label>
+                                <select class="form-select" id="workout-type" name="workout-type" required>
+                                    <option value="" disabled selected>Select your workout type</option>
+                                    <option value="strength-training">Strength Training</option>
+                                    <option value="body-building">Body Building</option>
+                                    <option value="aerobic">Aerobic</option>
+                                    <option value="calisthenics">Calisthenics</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="training-days" class="form-label">Training Days:</label>
+                                <select class="form-select" id="training-days" name="training-days" required>
+                                    <option value="" disabled selected>Select your training days</option>
+                                    <option value="2-days-or-less">2 Days or Less</option>
+                                    <option value="3-4-days">3-4 Days</option>
+                                    <option value="4-5-days">4-5 Days</option>
+                                    <option value="6-days-or-more">6+ Days</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="time-for-workout" class="form-label">Time for Workout:</label>
+                                <select class="form-select" id="time-for-workout" name="time-for-workout" required>
+                                    <option value="" disabled selected>Select your workout time</option>
+                                    <option value="30-minutes-or-less">30 Minutes or Less</option>
+                                    <option value="1-2-hours">1-2 Hours</option>
+                                    <option value="2-hours-or-more">2+ Hours</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="experience-level" class="form-label">Experience Level:</label>
+                                <select class="form-select" id="experience-level" name="experience-level" required>
+                                    <option value="" disabled selected>Select your experience level</option>
+                                    <option value="new-lifter">New Lifter</option>
+                                    <option value="amateur">Amateur</option>
+                                    <option value="experienced">Experienced</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                        <div class="suggested-workouts">
+                            <!-- The suggested workouts will appear here -->
+                            <ul id="suggestedWorkoutsList" class="list-group">
+                                <!-- List items will be added using JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS (Optional, but needed for certain features like the navbar toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="workout.js"></script>
+</body>
+
+</html>

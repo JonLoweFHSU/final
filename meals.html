@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="meals.js"></script>
+    <title>Your Fitness Hub - Meal Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Your Fitness Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="final.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="workout.html">Workout Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meals.html">Meal Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper mt-5">
+        <section id="meal">
+            <h2 class="text-center mb-4">Create Your Meal Plan</h2>
+            <form onsubmit="window.handleFormSubmission(event)">
+                <div class="mb-3 d-flex">
+                    <div class="me-3">
+                        <label for="goal" class="form-label">Goal:</label>
+                        <select class="form-select" id="goal" name="goal" required>
+                            <option value="" disabled selected>Select your goal</option>
+                            <option value="gain-weight">Gain Weight/Muscle</option>
+                            <option value="lose-weight">Lose Weight</option>
+                            <option value="lose-weight-gain-muscle">Lose Weight/Gain Muscle</option>
+                        </select>
+                    </div>
+                    <div class="me-3">
+                        <label for="weight" class="form-label">Weight (lbs):</label>
+                        <input type="number" class="form-control" id="weight" name="weight" required>
+                    </div>
+                    <div class="me-3">
+                        <label for="height-feet" class="form-label">Height (Feet):</label>
+                        <input type="number" class="form-control" id="height-feet" name="height-feet" required>
+                    </div>
+                    <div class="me-3">
+                        <label for="height-inches" class="form-label">Height (Inches):</label>
+                        <input type="number" class="form-control" id="height-inches" name="height-inches" required>
+                    </div>
+                    <div>
+                        <label for="preferred-diet" class="form-label">Preferred Diet:</label>
+                        <select class="form-select" id="preferred-diet" name="preferred-diet" required>
+                            <option value="" disabled selected>Select preferred diet</option>
+                            <option value="no-restrictions">No Restrictions</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="low-carb">Low Carb</option>
+                            <option value="carnivore">Carnivore</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="suggested-calories" class="form-label">Suggested Calories:</label>
+                    <input type="text" class="form-control" id="suggested-calories" name="suggested-calories" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="suggested-protein" class="form-label">Suggested Protein (g):</label>
+                    <input type="text" class="form-control" id="suggested-protein" name="suggested-protein" readonly>
+                </div>
+                <div class="mb-3">
+                    <h4>Suggested Foods:</h4>
+                    <ul id="food-list" class="list-group">
+                        <!-- The suggested foods will appear here -->
+                    </ul>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="meals.js"></script>
+</body>
+
+</html>
